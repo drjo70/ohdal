@@ -20,6 +20,11 @@
 - **HTML5**: 시맨틱 마크업
 - **CSS3**: 모던 스타일링 및 반응형 디자인
 - **JavaScript (Vanilla)**: 인터랙티브 기능 구현
+- **Firebase**: 백엔드 서비스
+  - **Firestore**: NoSQL 데이터베이스
+  - **Authentication**: 사용자 인증
+  - **Hosting**: 웹 호스팅
+  - **Analytics**: 사용자 분석 (선택사항)
 - **Intersection Observer API**: 스크롤 애니메이션
 
 ## 📁 프로젝트 구조
@@ -46,9 +51,25 @@ git clone https://github.com/drjo70/ohdal.git
 cd ohdal
 ```
 
-2. 웹 브라우저에서 `index.html` 파일 열기
+2. 의존성 설치 (선택사항)
+```bash
+npm install
+```
 
-또는 로컬 서버 실행:
+3. Firebase 설정 (선택사항)
+   - `FIREBASE_SETUP.md` 파일 참고
+   - `firebase-config.js`에 Firebase 프로젝트 정보 입력
+
+4. 로컬 서버 실행
+
+Firebase 사용:
+```bash
+npm start
+# 또는
+firebase serve
+```
+
+일반 웹 서버:
 ```bash
 # Python 3를 사용하는 경우
 python -m http.server 8000
@@ -57,7 +78,24 @@ python -m http.server 8000
 npx http-server
 ```
 
-3. 브라우저에서 `http://localhost:8000` 접속
+5. 브라우저에서 접속
+   - Firebase: `http://localhost:5000`
+   - 일반 서버: `http://localhost:8000`
+
+### Firebase 배포
+
+자세한 내용은 `FIREBASE_SETUP.md` 참고
+
+```bash
+# Firebase 로그인
+firebase login
+
+# 프로젝트 초기화
+firebase init
+
+# 배포
+npm run deploy
+```
 
 ## 🎨 디자인 컨셉
 

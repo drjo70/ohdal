@@ -36,3 +36,15 @@ build/
 # Temporary files
 *.tmp
 temp/
+
+# Firebase
+.firebase/
+.firebaserc.local
+serviceAccountKey.json
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Cache
+.cache/
+.firebase-cache/

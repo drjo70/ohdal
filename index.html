@@ -7,6 +7,12 @@
     <meta name="keywords" content="오달동이, 강릉, 천연 비누, 천연 화장품, 웰니스">
     <title>오달동이 - 해와 달의 도시 강릉</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
 </head>
 <body>
     <!-- 헤더 -->
@@ -245,6 +251,20 @@
         </div>
     </footer>
 
+    <!-- Firebase 설정 및 초기화 -->
+    <script src="firebase-config.js"></script>
     <script src="script.js"></script>
+    
+    <!-- Firebase 초기화 스크립트 -->
+    <script>
+        // 페이지 로드 시 Firebase 초기화
+        window.addEventListener('DOMContentLoaded', async () => {
+            const initialized = await initializeFirebase();
+            if (initialized) {
+                console.log('Firebase 연결 성공!');
+                // Firebase 초기화 후 제품 데이터 로드 등 추가 작업 가능
+            }
+        });
+    </script>
 </body>
 </html>
