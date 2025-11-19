@@ -366,12 +366,98 @@ section {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 }
 
 .product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: none;
+}
+
+/* 제품 일러스트 - 비누 */
+.product-card:nth-child(1) .product-image::before {
+    content: '';
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(135deg, #E3F2FD 0%, #90CAF9 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 -5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.product-card:nth-child(1) .product-image::after {
+    content: '🧼';
+    font-size: 4rem;
+    position: absolute;
+    opacity: 0.3;
+}
+
+/* 제품 일러스트 - 스프레이 */
+.product-card:nth-child(2) .product-image::before {
+    content: '';
+    width: 70px;
+    height: 140px;
+    background: linear-gradient(180deg, #BBDEFB 0%, #64B5F6 70%, #42A5F5 100%);
+    border-radius: 15px 15px 20px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.product-card:nth-child(2) .product-image::after {
+    content: '';
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(135deg, #90CAF9 0%, #42A5F5 100%);
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    top: 50px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 제품 일러스트 - 소금 */
+.product-card:nth-child(3) .product-image {
+    background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%);
+}
+
+.product-card:nth-child(3) .product-image::before {
+    content: '';
+    width: 100px;
+    height: 120px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(224, 247, 250, 0.95) 100%);
+    border-radius: 50% 50% 45% 45%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), inset 0 -10px 20px rgba(21, 101, 192, 0.2);
+    position: relative;
+    animation: float 3s ease-in-out infinite 1s;
+}
+
+.product-card:nth-child(3) .product-image::after {
+    content: '✨';
+    font-size: 3rem;
+    position: absolute;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+/* 부유 애니메이션 */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 반짝임 애니메이션 */
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
 }
 
 .product-info {
