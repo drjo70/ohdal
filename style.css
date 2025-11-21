@@ -593,25 +593,32 @@ section {
     line-height: 1.8;
 }
 
-/* 사업자등록증 */
-.business-license {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(21, 101, 192, 0.2);
+/* 사업의 종류 */
+.business-types {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.license-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+.business-types li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    border-bottom: 1px solid rgba(21, 101, 192, 0.1);
+    position: relative;
+    padding-left: 1.5rem;
 }
 
-.license-image:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+.business-types li:last-child {
+    border-bottom: none;
+}
+
+.business-types li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .about-card .mt-2 {
