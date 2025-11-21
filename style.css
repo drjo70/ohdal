@@ -593,6 +593,27 @@ section {
     line-height: 1.8;
 }
 
+/* 사업자등록증 */
+.business-license {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(21, 101, 192, 0.2);
+}
+
+.license-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.license-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
 .about-card .mt-2 {
     margin-top: 1rem;
 }
